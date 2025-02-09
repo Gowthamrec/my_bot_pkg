@@ -26,13 +26,8 @@ def generate_launch_description():
         parameters=[params]
     )
 
-    # Add joint_state_publisher
-    node_joint_state_publisher = Node(
-        package='joint_state_publisher',
-        executable='joint_state_publisher',
-        name='joint_state_publisher',
-        output='screen'
-    )
+
+
 
     # Launch!
     return LaunchDescription([
@@ -42,5 +37,5 @@ def generate_launch_description():
             description='Use sim time if true'
         ),
         node_robot_state_publisher,
-        node_joint_state_publisher
+
     ])
