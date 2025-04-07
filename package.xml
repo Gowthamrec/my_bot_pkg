@@ -4,21 +4,43 @@
   <name>my_bot_pkg</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
+<<<<<<< HEAD
   <maintainer email="user@todo.todo">user</maintainer>
+=======
+  <maintainer email="ros2@todo.todo">ros2</maintainer>
+>>>>>>> 53bf3c24d03ebb6d8206773d5c9483e200264f5d
   <license>TODO: License declaration</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   
   <!-- Build dependencies -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53bf3c24d03ebb6d8206773d5c9483e200264f5d
   <build_depend>rclcpp</build_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>geometry_msgs</build_depend>
   <build_depend>std_msgs</build_depend>
+<<<<<<< HEAD
   <build_depend>robot_state_publisher</build_depend>
   <build_depend>gazebo_ros</build_depend>
   <build_depend>urdf</build_depend>
   <build_depend>xacro</build_depend>
+=======
+  <build_depend>nav_msgs</build_depend>  <!-- Needed for odometry -->
+  <build_depend>tf2_ros</build_depend>  <!-- Needed for TF transformations -->
+  <build_depend>robot_state_publisher</build_depend>
+  <build_depend>joint_state_publisher</build_depend>
+  <build_depend>joint_state_publisher_gui</build_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>gazebo_ros_pkgs</build_depend>
+  <build_depend>urdf</build_depend>
+  <build_depend>xacro</build_depend>
+  <build_depend>controller_manager</build_depend>  <!-- ROS 2 control -->
+  <build_depend>ros2_control</build_depend>  <!-- Required for controlling actuators -->
+  <build_depend>ros2_controllers</build_depend>  <!-- Provides PID control support -->
+>>>>>>> 53bf3c24d03ebb6d8206773d5c9483e200264f5d
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
@@ -28,6 +50,7 @@
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>std_msgs</exec_depend>
+<<<<<<< HEAD
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>gazebo_ros</exec_depend>
   <exec_depend>urdf</exec_depend>
@@ -42,6 +65,20 @@
   <!-- Optional dependencies (if you plan to use the GUI for joint control) -->
   <exec_depend>joint_state_publisher</exec_depend>
   <exec_depend>joint_state_publisher_gui</exec_depend>
+=======
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>gazebo_ros_pkgs</exec_depend>
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>controller_manager</exec_depend>
+  <exec_depend>ros2_control</exec_depend>
+  <exec_depend>ros2_controllers</exec_depend>
+>>>>>>> 53bf3c24d03ebb6d8206773d5c9483e200264f5d
 
   <export>
     <build_type>ament_cmake</build_type>

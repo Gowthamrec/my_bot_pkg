@@ -9,6 +9,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     package_name = 'my_bot_pkg'
 
+<<<<<<< HEAD
     # Include RViz and state publisher launch
     rsp = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([
@@ -54,3 +55,34 @@ def generate_launch_description():
         robot_state_publisher,
         spawn_entity,
     ])
+=======
+
+
+    rsp = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory(package_name),'launch','my_bot_rviz.launch.py'
+                )]), launch_arguments={'use_sim_time': 'true'}.items()
+    )
+
+ 
+    gazebo = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
+             )
+
+    spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
+                        arguments=['-topic', 'robot_description',
+                                   '-entity', 'my_bot'],
+                        output='screen')
+    
+
+
+
+
+    return LaunchDescription([
+        rsp,
+        gazebo,
+        spawn_entity,
+
+    ])
+>>>>>>> 53bf3c24d03ebb6d8206773d5c9483e200264f5d
